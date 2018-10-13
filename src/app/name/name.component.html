@@ -1,0 +1,13 @@
+<div>
+  <h2 *ngIf="name; else elseblock">
+    Nom correspondant à l'id {{ id }} : {{ name }}
+  </h2>
+  <ng-template #elseblock>
+    <h2>
+      Entrez une id valide :
+    </h2>
+  </ng-template>
+</div>
+
+<input type="number" [(ngModel)]="id" (ngModelChange)="checkName()">
+
